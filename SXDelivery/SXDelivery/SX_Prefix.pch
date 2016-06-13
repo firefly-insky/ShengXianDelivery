@@ -1,0 +1,34 @@
+//
+//  SX_Prefix.pch
+//  SXDelivery
+//
+//  Created by FJF on 16/6/12.
+//  Copyright © 2016年 生鲜商品配送. All rights reserved.
+//
+
+#import "SXCommon.h"
+#import "UIView+ViewExtension.h"
+#import "UIView+SDWebImageExtension.h"
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#ifndef __OPTIMIZE__
+# define SXLog( format, ... ) NSLog( @"<%@:(%d)> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(format), ##__VA_ARGS__] )
+#else
+# define NSLog(...)
+#endif
+
+//屏幕尺寸
+#define SXScreenW [[UIScreen mainScreen] bounds].size.width
+#define SXScreenH     [[UIScreen mainScreen] bounds].size.height
+
+//颜色
+#define  SXColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#ifndef SX_Prefix_pch
+#define SX_Prefix_pch
+
+#endif /* SX_Prefix_pch */
